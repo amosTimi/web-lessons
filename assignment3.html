@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <title>Amos Lee</title>
+        <script>
+            function register(){
+                var name = document.getElementById('name').value;
+                alert("Thanks " + name + "\nYou have successfully subscribed to get updates.\nExpect to hear from us soon, shalom!");
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/assignment3.css" media="screen">
+    </head>
+    <body>
+        <img src="https://scontent.flos1-1.fna.fbcdn.net/v/t1.0-9/124017937_3402142583240803_8474308793535422008_n.jpg?_nc_cat=100&ccb=2&_nc_sid=730e14&_nc_eui2=AeGinas5aBj0oORQqS4o4aylNJLsGqKGIbg0kuwaooYhuHFhA9M3zXwTQeaSX8fnHr74paPrGRU4d4__VPVp6fwK&_nc_ohc=zF15YnCZSWIAX_XUieY&_nc_ht=scontent.flos1-1.fna&oh=31955aa341d53c30de2e013425f2aa30&oe=5FD0B196" 
+        alt="amoslee logo" id="logo"/>
+        <header>
+            <h5 id="intro-text">"Earnestly contend for the faith once delivered unto the saints."</h5>
+        </header>
+
+        <nav>
+            <ul id="navlist">
+                <li><a href="assignment3.html">Home</a></li>
+                <li><a href="#">Studies</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+        </nav>
+
+        <div class="firsts">
+            <h2 class= "sub-topic">Who are we?</h2>
+            <p id="firstsPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed blandit nibh, non commodo sem. Vestibulum vitae fermentum augue. Morbi vitae arcu sit amet nisi porttitor accumsan non sit amet erat. Cras auctor enim volutpat orci finibus, dapibus congue augue porta. Ut id erat pharetra, interdum justo non, eleifend quam. Donec laoreet mi sapien, sed tempor mauris molestie at. Nullam rhoncus quam dui, quis dapibus mi elementum eu.</p>
+            <p>
+                Learn more about us <a href="#" target="_self">Here</a>
+            </p>
+        </div>
+
+        <div class="seconds">
+            <h2 class="sub-topic">Search the Scriptures</h2>
+            <p id="secondspara">
+                Nam suscipit consectetur velit. Nulla ac dignissim libero. Proin tincidunt tempus enim, a consectetur nisl aliquet a. Nulla vel porta massa. Ut venenatis eu risus sit amet tincidunt. Etiam lacus nisl, lacinia sed malesuada vitae, congue non orci. Mauris lobortis porttitor eros sit amet tincidunt. Proin quam erat, mattis vitae odio quis, vestibulum dapibus ante. Sed felis orci, efficitur vitae pellentesque at, elementum ac quam. Sed vel nibh ut turpis tempus imperdiet nec vitae augue. Nunc fermentum turpis sit amet commodo gravida. Praesent bibendum, ipsum ullamcorper egestas rutrum, odio turpis iaculis mauris, ut rhoncus nibh tellus et urna. Vestibulum eu blandit elit, ut posuere velit. Phasellus ultricies nunc odio, eu scelerisque nunc tincidunt dapibus. Praesent metus tortor, ullamcorper eu neque in, dictum placerat tellus. Vestibulum mi diam, tristique nec urna in, gravida molestie ex.
+            </p>
+            <p><a href="#" target=_self>Click</a> to view different study guides.</p>
+        </div>
+
+        <div class="thirds">
+            <h2 class="sub-topic">Ministerial Courses</h2>
+            <p>
+                Morbi id ipsum at libero feugiat feugiat nec et dolor. Fusce sed mollis mi. Aliquam id dapibus sapien. Mauris id mi laoreet, lacinia nisi nec, laoreet mi. Mauris euismod consectetur dui in pretium. Vivamus erat felis, pharetra vitae nibh nec, rutrum malesuada diam. Morbi pretium sem eget dictum porttitor. Cras vulputate consequat dui.  
+            </p>
+            <ul id="courses">
+                <li><a href="#">Apologetics</a></li>
+                <li><a href="#">Hermeneutics</a></li>
+                <li><a href="#">Homiletics</a></li>
+                <li><a href="#">Christology</a></li>
+                <aside>and a few others.</aside>
+            </ul>
+        </div>
+
+        <div class="fourths">
+            <h4 class="sub-topic">Exegesis versus Eisegesis</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed blandit nibh, non commodo sem. Vestibulum vitae fermentum augue. Morbi vitae arcu sit amet nisi porttitor accumsan non sit amet erat.</p>
+            
+            <p>The table below shows the summary of the differences</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exegesis</th>
+                        <th>Eisegesis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>what happened</td>
+                        <td>What I think happened</td>
+                    </tr>
+                    <tr>
+                        <td>How it happened</td>
+                        <td>How I think it happened</td>
+                    </tr>
+                    <tr>
+                        <td>what it says</td>
+                        <td>What I'm saying</td>
+                    </tr>
+                    <tr>
+                        <td>Correct</td>
+                        <td>Wrong</td>
+                    </tr>
+                    <tr>
+                        <td>Edifies</td>
+                        <td>Corrupts</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>Got questions? Check <a href="http://www.gotquestions.org">Got questions</a></p>
+        </div>
+
+        <div class="form">
+            <form>
+                <p id="formguy">Register to get updates</p><hr>
+                Name: <input type="text" id= "name" value="" placeholder="Name" required="required">
+                Email: <input type="email" value="" placeholder="email address" required="required">
+                <input type="button" id="submit" value="Register Me" onclick="register();">
+                <div id="subscription">Subscription type:
+                    <input type="radio" id="daily" name="updates" value="daily">
+                    <label for="daily">Daily Updates</label>
+                    <input type="radio" id="weekly" name="updates" value="weekly">
+                    <label for="daily">Weekly Updates</label>
+                    <input type="radio" id="monthly" name="updates" value="monthly">
+                    <label for="daily">Monthly Updates</label>
+                </div>
+            </form>
+        </div>
+
+        <footer id="footer">
+            <p>
+                Maecenas id pretium justo, a ultricies dui. In molestie, metus eget varius placerat, nibh est lacinia dolor, a mollis libero eros quis odio. In erat justo, suscipit sed faucibus in, luctus vel nunc.
+            </p>
+        </footer>
+    </body>
+</html>
