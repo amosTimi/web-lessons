@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Form Site</title>
+        <style>
+            body{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-left: 50px;
+                margin-right: 50px;
+                padding: 50px;
+                background-color: moccasin;
+            }
+            h2{
+                text-align: center;
+                font-size: 2em;
+            }
+            .mainform{
+                background-color: mediumspringgreen;
+                padding: 20px;
+            }
+            #firstName,#lastName,#email,#password, #quantity, #price{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            #orderHead{
+                font-weight: bolder;
+                font-size: 1em;
+            }
+            .orders{
+                margin: 20px;
+            }
+            #makeOrder{
+                background: maroon;
+                padding: 5px;
+                /* display: block; */
+                width: auto;
+                margin-top: 10px;
+                text-align: center;
+                font-size: 1.5em;
+                color: lavenderblush;
+            }
+            #makeOrder:hover{
+                background: lightsalmon;
+            }
+
+            .resultSection{
+                background-color: lightseagreen;
+                margin-top: 10px;
+                padding: 10px;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            function firstNameAlert(){
+                var field1 = document.getElementById('firstName').value;
+                var regex = /^[a-zA-Z\s\'\-]{2,15}$/;
+
+                if (regex.test(field1)){
+                    document.getElementById('firstNameMessage').style.color = "green";
+                    document.getElementById('firstNameMessage').innerHTML = "Input Accepted";
+                }
+                    
+                else{
+                    document.getElementById('firstNameMessage').style.color = "red";
+                    document.getElementById('firstNameMessage').innerHTML = "Name too short!";
+                }
+                                   
+            }
+            function lastNameAlert(){
+                var field2 = document.getElementById('lastName').value;
+                var regex2 = /^[a-zA-Z\s\'\-]{2,15}$/;
+
+                if (regex2.test(field2)){
+                    document.getElementById('lastNameMessage').style.color = "green";
+                    document.getElementById('lastNameMessage').innerHTML = "Input Accepted";
+                }
+                    
+                else{
+                    document.getElementById('lastNameMessage').style.color = "red";
+                    document.getElementById('lastNameMessage').innerHTML = "Name too short!";
+                }
+                                   
+            }
+            function passwordAlert(){
+                var password = document.getElementById('password').value;
+
+                if (password.length < 9){
+                    document.getElementById('passwordMessage').style.color = "red";
+                    document.getElementById('passwordMessage').innerHTML = "Password too short!";
+                }
+                    
+                else{
+                    document.getElementById('passwordMessage').style.color = "green";
+                    document.getElementById('passwordMessage').innerHTML = "accepted!";
+                }
+                                   
+            }
+
+
+            function order(){
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var fullName = firstName + ' ' + lastName;
+
+                var quantity = document.getElementById('quantity').value;
+                var price = document.getElementById('price').value;
+
+                document.getElementById('result').innerHTML = "<p>Customer Name:" + fullName.toUpperCase();
+                document.getElementById('result').innerHTML += "<p>Order Total: $ " + price * quantity + "</p>";
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Kowope Mart</h2>
+        <h3>Submit order</h3>
+
+        <form class="mainform">
+            First Name:<input type="text" placeholder="First Name"  onblur="firstNameAlert();" id="firstName"><br>
+            <span id="firstNameMessage">&nbsp;</span><br>
+            Last Name:<input type="text" placeholder="Last Name" onblur="lastNameAlert();" id="lastName"><br>
+            <span id="lastNameMessage">&nbsp;</span><br>
+            Email:<input type="email" placeholder="email" id="email" required="required" value=""><br>
+            Password:<input type="password" placeholder="password" id="password" value="" onblur="passwordAlert();"><br>
+            <span id="passwordMessage">&nbsp;</span><br>
+
+            <hr>
+            <span id="orderHead">Current Order</span><br>
+
+            <div class="orders">
+                Quantity:<input type="number" min="1" id="quantity" required="required"><span id="quantityMessage" onblur="quantityAlert();"></span><br>
+                Price ($):<input type="number" id="price" required="required" value="10" readonly><br>
+
+                <span id="makeOrder" onclick="order();">Make Order</span>
+            </div>
+        </form>
+        <div class="resultSection">
+            <h4 style="text-decoration:underline; text-align:center;font-weight: bolder;margin-top:0;">Order Summary</h4>
+            <span id="result"></span>
+        </div>
+
+        
+    </body>
+</html>
